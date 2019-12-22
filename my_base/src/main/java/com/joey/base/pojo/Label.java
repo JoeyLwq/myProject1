@@ -14,6 +14,19 @@ public class Label implements Serializable {
     private String state;
     private Long count;
     private Long fans;
+    private String recommend;
+
+    @Override
+    public String toString() {
+        return "Label{" +
+                "id='" + id + '\'' +
+                ", labelname='" + labelname + '\'' +
+                ", state='" + state + '\'' +
+                ", count=" + count +
+                ", fans=" + fans +
+                ", recommend='" + recommend + '\'' +
+                '}';
+    }
 
     public String getId() {
         return id;
@@ -62,6 +75,4 @@ public class Label implements Serializable {
     public void setRecommend(String recommend) {
         this.recommend = recommend;
     }
-
-    private String recommend;
 }

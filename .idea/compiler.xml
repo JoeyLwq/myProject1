@@ -10,10 +10,14 @@
         <module name="my_common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="my_base (1)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="my_base" options="-parameters" />
+      <module name="my_base (1)" options="-parameters" />
       <module name="my_common" options="-parameters" />
     </option>
   </component>
