@@ -10,6 +10,7 @@
     <modules>
         <module>my_common</module>
         <module>my_base</module>
+        <module>test_queue</module>
     </modules>
     <packaging>pom</packaging>
 
