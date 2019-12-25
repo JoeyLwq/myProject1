@@ -6,13 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test_queue" />
+        <module name="my_user" />
         <module name="my_base" />
         <module name="my_common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="my_base (1)" target="1.8" />
+      <module name="test_queue" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -20,6 +21,7 @@
       <module name="my_base" options="-parameters" />
       <module name="my_base (1)" options="-parameters" />
       <module name="my_common" options="-parameters" />
+      <module name="my_user" options="-parameters" />
       <module name="test_queue" options="-parameters" />
     </option>
   </component>

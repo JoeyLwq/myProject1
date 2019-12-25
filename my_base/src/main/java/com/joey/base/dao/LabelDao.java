@@ -1,9 +1,8 @@
 package com.joey.base.dao;
 
 import com.joey.base.pojo.Label;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import dao.CommonDao;
 
 
-public interface LabelDao extends JpaRepository<Label, String>, JpaSpecificationExecutor<Label> {
+public interface LabelDao extends CommonDao<Label,String> {
 }
