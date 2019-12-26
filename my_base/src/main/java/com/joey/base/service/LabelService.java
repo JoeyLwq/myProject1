@@ -19,7 +19,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class LabelService extends CommonService<Label, String> {
+public class LabelService extends CommonService<Label> {
     @Autowired
     private LabelDao labelDao;
 

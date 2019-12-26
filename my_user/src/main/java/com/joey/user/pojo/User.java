@@ -1,6 +1,7 @@
 package com.joey.user.pojo;
 
 
+import entity.common.CommonEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "tb_user")
-public class User {
+public class User extends CommonEntity<User> {
 
     @Id
     private String id;

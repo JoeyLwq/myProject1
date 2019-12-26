@@ -1,4 +1,10 @@
+server:
+  port: 9002
+  tomcat:
+    max-http-header-size: 8192
 spring:
+  application:
+    name: my-user
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/myProject1?serverTimezone=UTC

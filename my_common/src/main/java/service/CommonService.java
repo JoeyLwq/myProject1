@@ -17,10 +17,10 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CommonService<T extends CommonEntity, D> {
+public class CommonService<T extends CommonEntity> {
 
     @Autowired
-    CommonDao<T, D> commonDao;
+    private CommonDao<T> commonDao;
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -41,6 +41,6 @@ public class CommonService<T extends CommonEntity, D> {
 
     public void delete(T entity) {
         redisTemplate.delete(entity.getClass().getCanonicalName() + entity.getId());
-        commonDao.deleteById((D) entity.getId());
+        commonDao.deleteById((String) entity.getId());
     }
 }

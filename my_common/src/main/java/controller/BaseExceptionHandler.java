@@ -1,4 +1,4 @@
-package com.joey.base.controller;
+package controller;
 
 
 import entity.Result;

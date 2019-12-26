@@ -15,10 +15,10 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-public class CommonController<T extends CommonEntity, D> {
+public class CommonController<T extends CommonEntity> {
 
     @Autowired
-    CommonService<T, D> commonService;
+    CommonService<T> commonService;
 
     @GetMapping
     public Result getAll(){
