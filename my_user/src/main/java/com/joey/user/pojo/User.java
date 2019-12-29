@@ -20,4 +20,8 @@ public class User extends CommonEntity<User> {
 
     private String roleTypeId;
 
+    private String password;
+
+    private String phone;
+
 }
