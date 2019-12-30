@@ -1,5 +1,6 @@
 package com.joey.base.controller;
 
+import com.joey.base.client.BaseClient;
 import com.joey.base.pojo.Label;
 import com.joey.base.service.LabelService;
 import controller.CommonController;
@@ -33,5 +34,16 @@ public class LabelController extends CommonController<Label> {
     public Result findPage(@RequestBody Label label, @PathVariable int page, @PathVariable int size) {
         Page<Label> pageData = labelService.pageQuery(label, page, size);
         return new Result(true, StatusCode.OK, "查询成功", new PageResult<Label>(pageData.getTotalElements(), pageData.getContent()));
+    }
+
+
+
+    /*测试Eureka和Feign的服务发现*/
+    @Autowired
+    private BaseClient baseClient;
+
+    @PostMapping("/user/sendSms/{phone}")
+    public Result sendSms(@PathVariable String phone){
+        return baseClient.sendSms(phone);
     }
 }

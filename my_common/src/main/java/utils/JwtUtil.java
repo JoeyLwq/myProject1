@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/*读不到配置文件可能是因为没有get、set方法*/
 @Data
 @ConfigurationProperties("jwt.config")
 public class JwtUtil {

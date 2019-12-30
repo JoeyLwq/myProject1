@@ -12,6 +12,7 @@
         <module>my_base</module>
         <module>my_user</module>
         <module>my_sendSms</module>
+        <module>my_eureka</module>
     </modules>
     <packaging>pom</packaging>
 

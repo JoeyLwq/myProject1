@@ -22,6 +22,7 @@ public class IntercepterConfig extends WebMvcConfigurationSupport {
                 .excludePathPatterns(new ArrayList<String>(){{
                     add("/**/login/**");
                     add("/**/regist/**");
+                    add("/**/sendSms/**");
                 }});
         super.addInterceptors(registry);
     }

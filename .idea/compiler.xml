@@ -10,6 +10,7 @@
         <module name="my_sendSms" />
         <module name="my_base" />
         <module name="my_common" />
+        <module name="my_eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="my_base" options="-parameters" />
       <module name="my_base (1)" options="-parameters" />
       <module name="my_common" options="-parameters" />
+      <module name="my_eureka" options="-parameters" />
       <module name="my_sendSms" options="-parameters" />
       <module name="my_user" options="-parameters" />
       <module name="test_queue" options="-parameters" />

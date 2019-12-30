@@ -9,25 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>my_base</artifactId>
-
+    <artifactId>my_eureka</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.joey</groupId>
-            <artifactId>my_common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>2.2.1.BUILD-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.2.1.BUILD-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
+
 
 </project>
