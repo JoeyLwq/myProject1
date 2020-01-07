@@ -46,4 +46,9 @@ public class LabelController extends CommonController<Label> {
     public Result sendSms(@PathVariable String phone){
         return baseClient.sendSms(phone);
     }
+
+    @GetMapping("/user")
+    public Result getUser(){
+        return baseClient.getAll();
+    };
 }
