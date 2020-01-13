@@ -13,6 +13,7 @@
         <module>my_user</module>
         <module>my_sendSms</module>
         <module>my_eureka</module>
+        <module>my_manager</module>
     </modules>
     <packaging>pom</packaging>
 
