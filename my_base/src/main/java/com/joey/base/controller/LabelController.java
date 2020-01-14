@@ -7,11 +7,13 @@ import controller.CommonController;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import org.apache.commons.fileupload.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import utils.IdGenerator;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -22,6 +24,8 @@ public class LabelController extends CommonController<Label> {
 
     @Autowired
     private LabelService labelService;
+    @Autowired
+    private HttpServletRequest httpServletRequest;
 
     @PostMapping("/search")
     public Result findSerch(@RequestBody Label label) {
@@ -49,6 +53,8 @@ public class LabelController extends CommonController<Label> {
 
     @GetMapping("/user")
     public Result getUser(){
+        String authorization = httpServletRequest.getHeader("Authorization");
+        System.out.println(authorization);
         return baseClient.getAll();
     };
 }

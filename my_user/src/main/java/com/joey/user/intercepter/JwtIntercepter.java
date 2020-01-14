@@ -19,6 +19,7 @@ public class JwtIntercepter implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String authorization = request.getHeader("Authorization");
+        System.out.println(authorization);
         if (StringUtils.isEmpty(authorization) || !authorization.startsWith("Bearer ")) {
             throw new RuntimeException("请先登录并获取token");
         }
