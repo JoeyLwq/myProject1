@@ -14,3 +14,4 @@ zuul:
     my-base:
       path: /base/**
       serviceId: my-base
+  sensitive-headers:

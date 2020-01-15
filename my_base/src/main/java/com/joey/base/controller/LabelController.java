@@ -24,8 +24,6 @@ public class LabelController extends CommonController<Label> {
 
     @Autowired
     private LabelService labelService;
-    @Autowired
-    private HttpServletRequest httpServletRequest;
 
     @PostMapping("/search")
     public Result findSerch(@RequestBody Label label) {
@@ -53,8 +51,6 @@ public class LabelController extends CommonController<Label> {
 
     @GetMapping("/user")
     public Result getUser(){
-        String authorization = httpServletRequest.getHeader("Authorization");
-        System.out.println(authorization);
         return baseClient.getAll();
     };
 }
