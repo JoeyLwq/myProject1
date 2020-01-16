@@ -15,9 +15,4 @@ public class ManagerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ManagerApplication.class, args);
     }
-
-    @Bean
-    public JwtUtil jwtUtil(){
-        return new JwtUtil();
-    }
 }

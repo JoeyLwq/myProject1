@@ -15,7 +15,3 @@ zuul:
       path: /base/**
       serviceId: my-base
   sensitive-headers:
-jwt:
-  config:
-    signKey: joey
-    expireDuring: 0
