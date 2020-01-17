@@ -1,19 +1,23 @@
 package com.joey.user.controller;
 
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.ConfigService;
 import com.joey.user.pojo.User;
 import com.joey.user.service.UserService;
 import controller.CommonController;
 import entity.Result;
 import entity.StatusCode;
-import io.jsonwebtoken.Claims;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import utils.JwtUtil;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @RestController
@@ -29,6 +33,8 @@ public class UserController extends CommonController<User> {
     private JwtUtil jwtUtil;
     @Autowired
     private HttpServletRequest request;
+    @Value("${tryApollo2}")
+    private String tryApollo2;
 
     @PostMapping("/sendSms/{phone}")
     public Result sendSms(@PathVariable String phone){
@@ -78,4 +84,16 @@ public class UserController extends CommonController<User> {
         private User user;
         private String checkCode;
     }
+
+    @GetMapping("tryApollo")
+    public Result tryApollo(){
+        Config appConfig = ConfigService.getAppConfig();
+        String aTry = appConfig.getProperty("try", null);
+        Map<String ,String> map= new HashMap<>();
+        map.put("tryApollo1",aTry);
+        map.put("tryApollo2",tryApollo2);
+        return new Result(true,StatusCode.OK,"读取成功",map);
+    }
+
+
 }

@@ -28,3 +28,11 @@ eureka:
       defaultZone: http://127.0.0.1:6868/eureka/
   instance:
     prefer-ip-address: true
+app:
+  id: my-user
+apollo:
+  meta: http://127.0.0.1:8080
+  bootstrap:
+    enabled: true
+    eagerLoad:
+      enabled: true

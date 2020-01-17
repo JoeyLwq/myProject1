@@ -23,6 +23,7 @@ public class IntercepterConfig extends WebMvcConfigurationSupport {
                     add("/**/login/**");
                     add("/**/regist/**");
                     add("/**/sendSms/**");
+                    add("/**/try*/**");
                 }});
         super.addInterceptors(registry);
     }
