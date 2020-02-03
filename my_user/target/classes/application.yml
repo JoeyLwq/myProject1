@@ -6,8 +6,8 @@ spring:
   application:
     name: my-user
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.101.134:3306/myProject1?serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.101.134:3306/myProject1?serverTimezone=UTC
     username: root
     password: password
   jpa:

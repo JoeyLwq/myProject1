@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="my_user" />
+        <module name="my_sendSms" />
         <module name="my_eureka" />
-        <module name="my_manager" />
         <module name="my_common" />
         <module name="my_base" />
+        <module name="my_manager" />
         <module name="my_config" />
-        <module name="my_sendSms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
