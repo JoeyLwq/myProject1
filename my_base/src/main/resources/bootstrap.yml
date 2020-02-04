@@ -5,41 +5,49 @@
 #      profile: config
 #      label: master
 #      uri: http://127.0.0.1:12000
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:6868/eureka/
-  instance:
-    prefer-ip-address: true
-feign:
-  hystrix:
+app:
+  id: my-base
+apollo:
+  meta: http://192.168.101.134:8088
+  bootstrap:
     enabled: true
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: SEMAPHORE
-        timeout:
-          enabled: false
-server:
-  port: 9001
-  tomcat:
-    max-http-header-size: 8192
-spring:
-  application:
-    name: my-base
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    password: password
-    url: jdbc:mysql://127.0.0.1:3306/myProject1?serverTimezone=UTC
-    username: root
-  jpa:
-    database: mysql
-    generate-ddl: true
-    show-sql: true
-  rabbitmq:
-    host: 192.168.101.134
-  redis:
-    host: 192.168.101.134
+    eagerLoad:
+      enabled: true
+    namespaces: application,TEST1.common
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.101.134:6868/eureka/
+#  instance:
+#    prefer-ip-address: true
+#feign:
+#  hystrix:
+#    enabled: true
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          strategy: SEMAPHORE
+#        timeout:
+#          enabled: false
+#server:
+#  port: 9001
+#  tomcat:
+#    max-http-header-size: 8192
+#spring:
+#  application:
+#    name: my-base
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    password: password
+#    url: jdbc:mysql://192.168.101.134:3306/myProject1?serverTimezone=UTC
+#    username: root
+#  jpa:
+#    database: mysql
+#    generate-ddl: true
+#    show-sql: true
+#  rabbitmq:
+#    host: 192.168.101.134
+#  redis:
+#    host: 192.168.101.134

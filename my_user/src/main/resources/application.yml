@@ -1,39 +1,39 @@
-server:
-  port: 9002
-  tomcat:
-    max-http-header-size: 8192
-spring:
-  application:
-    name: my-user
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.101.134:3306/myProject1?serverTimezone=UTC
-    username: root
-    password: password
-  jpa:
-    database: mysql
-    show-sql: true
-    generate-ddl: true
-  redis:
-    host: 192.168.101.134
-  rabbitmq:
-    host: 192.168.101.134
-jwt:
-  config:
-    signKey: joey
-    expireDuring: 0
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.101.134:6868/eureka/
-  instance:
-    prefer-ip-address: true
+#server:
+#  port: 9002
+#  tomcat:
+#    max-http-header-size: 8192
+#spring:
+#  application:
+#    name: my-user
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.101.134:3306/myProject1?serverTimezone=UTC
+#    username: root
+#    password: password
+#  jpa:
+#    database: mysql
+#    show-sql: true
+#    generate-ddl: true
+#  redis:
+#    host: 192.168.101.134
+#  rabbitmq:
+#    host: 192.168.101.134
+#jwt:
+#  config:
+#    signKey: joey
+#    expireDuring: 0
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.101.134:6868/eureka/
+#  instance:
+#    prefer-ip-address: true
 app:
   id: my-user
-#apollo:
-#  meta: http://192.168.101.134:8080
-#  bootstrap:
-#    enabled: true
-#    eagerLoad:
-#      enabled: true
-#    namespaces: application,TEST1.common
+apollo:
+  meta: http://192.168.101.134:8088
+  bootstrap:
+    enabled: true
+    eagerLoad:
+      enabled: true
+    namespaces: application,TEST1.common

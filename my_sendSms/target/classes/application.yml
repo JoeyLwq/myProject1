@@ -1,5 +1,0 @@
-server:
-  port: 9009
-spring:
-  rabbitmq:
-    host: 127.0.0.1
