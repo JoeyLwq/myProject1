@@ -8,7 +8,8 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 @Entity
@@ -19,8 +20,10 @@ public class System extends CommonEntity<System> {
 
     @Id
     @Excel(name = "id", width = 30)
+    @Pattern(regexp = "[0-9]{0,6}",message = "只能为小于7位的数字")
     private String id;
     @Excel(name = "系统英文名", width = 30)
+    @NotBlank
     private String systemEng;
     @Excel(name = "系统中文名", width = 30)
     private String systemChn;

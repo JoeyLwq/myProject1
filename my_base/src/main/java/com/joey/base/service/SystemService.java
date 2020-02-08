@@ -1,16 +1,11 @@
 package com.joey.base.service;
 
-import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
-import cn.afterturn.easypoi.excel.entity.ExportParams;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.joey.base.dao.SystemDao;
 import com.joey.base.pojo.System;
 import entity.Result;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.collections4.ListUtils;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.mockito.internal.util.collections.ListUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,8 +25,9 @@ public class SystemService extends CommonService<System> {
     private SystemDao systemDao;
 
     public Result saveExcel(MultipartFile file) {
-        /*创建导入对象并设置表头行*/
+        /*创建导入对象并设置表头行和是否进行验证等*/
         ImportParams importParams = new ImportParams();
+        importParams.setNeedVerfiy(true);
         importParams.setHeadRows(1);
         /*获取excel内容*/
         List<System> systems = new ArrayList<>();
