@@ -29,7 +29,11 @@ public class Result {
         return flag;
     }
 
-    public static Result success(){
-        return new Result(true,StatusCode.OK,"执行成功");
+    public static Result success() {
+        return new Result(true, StatusCode.OK, "执行成功");
+    }
+
+    public static Result failure(String msg) {
+        return new Result(false, StatusCode.ERROR, msg);
     }
 }

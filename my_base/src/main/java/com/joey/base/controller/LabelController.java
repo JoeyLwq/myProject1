@@ -7,13 +7,10 @@ import controller.CommonController;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
-import org.apache.commons.fileupload.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-import utils.IdGenerator;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -38,8 +35,6 @@ public class LabelController extends CommonController<Label> {
         return new Result(true, StatusCode.OK, "查询成功", new PageResult<Label>(pageData.getTotalElements(), pageData.getContent()));
     }
 
-
-
     /*测试Eureka和Feign的服务发现*/
     @Autowired
     private BaseClient baseClient;
@@ -53,4 +48,5 @@ public class LabelController extends CommonController<Label> {
     public Result getUser(){
         return baseClient.getAll();
     };
+
 }

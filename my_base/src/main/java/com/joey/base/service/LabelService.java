@@ -2,8 +2,10 @@ package com.joey.base.service;
 
 import com.joey.base.dao.LabelDao;
 import com.joey.base.pojo.Label;
+import dao.CommonDao;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

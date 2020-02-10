@@ -3,10 +3,10 @@ package com.joey.user.service;
 
 import com.joey.user.dao.UserDao;
 import com.joey.user.pojo.User;
+import dao.CommonDao;
 import entity.Result;
 import entity.StatusCode;
 import org.apache.commons.lang3.StringUtils;
-import org.mockito.internal.util.collections.ListUtil;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,11 +17,9 @@ import utils.IdGenerator;
 import utils.QueryMaker;
 
 import javax.transaction.Transactional;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @Service
 @Transactional
